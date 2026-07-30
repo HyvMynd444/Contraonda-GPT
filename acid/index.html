@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es" data-edition="acid-signal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070807">
+  <meta name="description" content="Contraonda — noches de música electrónica progresiva y melódica en Ciudad de México.">
+  <title>Contraonda — CDMX</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23070807'/%3E%3Cpath d='M8 32c7-18 13-18 20 0s13 18 28 0' fill='none' stroke='%23d8ff00' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=16">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="script.js?v=16"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="ambient" aria-hidden="true">
+    <div id="canvas-container"></div>
+    <div class="aurora"></div>
+    <div class="signal-grid"></div>
+    <div class="cymatics"></div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="laser-frame" aria-hidden="true">
+    <i class="laser laser--top"></i>
+    <i class="laser laser--right"></i>
+    <i class="laser laser--bottom"></i>
+    <i class="laser laser--left"></i>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Contraonda, inicio">
+      <strong class="wordmark" aria-hidden="true">CONTR<span class="wordmark-a">Λ</span>OND<span class="wordmark-a">Λ</span></strong>
+      <span>CDMX · MX</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#fechas">Fechas</a>
+      <a href="#lista">Lista</a>
+    </nav>
+
+    <a class="header-cta alien-module alien-module--compact" href="#fechas">Admit one <span>↗</span></a>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-kicker">
+        <strong>Curando buena vibra</strong>
+        <span>Música electrónica<br>progresiva y melódica.</span>
+      </div>
+
+      <div class="hero-title-wrap">
+        <p class="signal" aria-hidden="true">Signal 19.4326° N</p>
+        <div class="hero-logo-lockup">
+          <svg class="hero-metal hero-metal--back" viewBox="0 0 1600 320" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="metal-back" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#061335" stop-opacity="0"/>
+                <stop offset="0.22" stop-color="#438cff" stop-opacity="0.46"/>
+                <stop offset="0.45" stop-color="#a1ddff" stop-opacity="0.18"/>
+                <stop offset="0.7" stop-color="#8de7ff" stop-opacity="0.58"/>
+                <stop offset="1" stop-color="#07112a" stop-opacity="0"/>
+              </linearGradient>
+              <filter id="metal-aura" x="-30%" y="-100%" width="160%" height="300%">
+                <feGaussianBlur stdDeviation="18" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <path class="metal-shadow" d="M-90 170 C70 18 178 304 330 146 S565 22 715 166 S940 306 1100 143 S1372 20 1690 172"/>
+            <path class="metal-body" d="M-90 170 C70 18 178 304 330 146 S565 22 715 166 S940 306 1100 143 S1372 20 1690 172" stroke="url(#metal-back)" filter="url(#metal-aura)"/>
+            <path class="metal-filament" d="M-80 203 C100 72 190 270 352 173 S590 55 740 194 S970 270 1125 164 S1395 62 1685 199"/>
+          </svg>
+
+          <h1 id="hero-title" aria-label="Contraonda"><span aria-hidden="true">CONTR<span class="wordmark-a">Λ</span>OND<span class="wordmark-a">Λ</span></span></h1>
+
+          <svg class="hero-metal hero-metal--front" viewBox="0 0 1600 320" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="metal-front" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#1b55d9" stop-opacity="0"/>
+                <stop offset="0.32" stop-color="#d9f7ff" stop-opacity="0.82"/>
+                <stop offset="0.52" stop-color="#2c96ff" stop-opacity="0.5"/>
+                <stop offset="0.78" stop-color="#9ceaff" stop-opacity="0.78"/>
+                <stop offset="1" stop-color="#1644a8" stop-opacity="0"/>
+              </linearGradient>
+              <filter id="metal-front-glow" x="-30%" y="-100%" width="160%" height="300%">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <path class="metal-flow" d="M-90 170 C70 18 178 304 330 146 S565 22 715 166 S940 306 1100 143 S1372 20 1690 172" stroke="url(#metal-front)" filter="url(#metal-front-glow)"/>
+            <path class="metal-glint" d="M-90 170 C70 18 178 304 330 146 S565 22 715 166 S940 306 1100 143 S1372 20 1690 172"/>
+            <path class="metal-mist" d="M-80 203 C100 72 190 270 352 173 S590 55 740 194 S970 270 1125 164 S1395 62 1685 199"/>
+          </svg>
+        </div>
+        <p class="hero-subtitle">Contra la corriente · Ciudad de México</p>
+      </div>
+
+      <a class="scroll-cue" href="#sobre">
+        <span>Entrar</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <section class="about section section-grid" id="sobre" aria-labelledby="about-title">
+      <div class="section-index">
+        <span>—01</span>
+        <span>Sobre</span>
+      </div>
+
+      <div class="about-copy reveal">
+        <h2 id="about-title">Contraonda<span>.</span></h2>
+        <p class="lead">Warm-ups que importan. Música que evoluciona con intención. Noches inmersivas de principio a fin.</p>
+        <p>Sonido, movimiento y personas presentes en la pista.</p>
+        <p>Una serie de noches íntimas. Aforos cuidados, salas que respiran.</p>
+        <p class="muted">Para quienes van contra corriente.</p>
+      </div>
+
+      <div class="frequency-mark" aria-hidden="true">
+        <span>40 Hz</span>
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        <span>18 kHz</span>
+      </div>
+    </section>
+
+    <section class="dates section section-grid" id="fechas" aria-labelledby="dates-title">
+      <canvas class="ticket-portal" aria-hidden="true"></canvas>
+      <div class="section-index">
+        <span>—02</span>
+        <span>Calendario</span>
+      </div>
+
+      <div class="dates-content reveal">
+        <p class="overline">Próxima transmisión</p>
+        <h2 id="dates-title">Próximas<br><em>fechas</em></h2>
+        <p class="coming-soon">Nuestra primera noche llega pronto.</p>
+        <p class="fine-print">Las primeras fechas se anuncian a la lista antes que a nadie.</p>
+
+        <a class="admit-ticket" href="#lista" aria-label="Únete a la lista para acceso anticipado">
+          <span class="ticket-face">
+            <span class="ticket-stars" aria-hidden="true">✦ · · ✧ · ✦</span>
+            <span class="ticket-seal" aria-hidden="true">
+              <b>CO</b>
+              <small>Ω–19</small>
+            </span>
+            <span class="ticket-copy">
+              <small class="wordmark" aria-hidden="true">CONTR<span class="wordmark-a">Λ</span>OND<span class="wordmark-a">Λ</span></small>
+              <strong>Admit one</strong>
+              <em>Interstellar access credential</em>
+            </span>
+            <span class="ticket-orbit" aria-hidden="true"><i></i><b>19</b></span>
+            <span class="ticket-code" aria-hidden="true">CO · 001 · CDMX</span>
+            <span class="ticket-coordinates" aria-hidden="true">19.4326° N / 99.1332° W</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="coordinates" aria-hidden="true">
+        <span>19.4326° N</span>
+        <span>99.1332° W</span>
+      </div>
+    </section>
+
+    <section class="newsletter section section-grid" id="lista" aria-labelledby="newsletter-title">
+      <div class="section-index">
+        <span>—03</span>
+        <span>Lista</span>
+      </div>
+
+      <div class="newsletter-content reveal">
+        <p class="overline">Canal privado</p>
+        <h2 id="newsletter-title">Anuncios primero<br>a quien <em>escucha.</em></h2>
+        <p>Fechas, line-ups y grabaciones antes que en redes sociales.</p>
+
+        <form class="signup-form" novalidate>
+          <label class="sr-only" for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+          <button class="alien-module alien-module--compact" type="submit">Suscribir <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="privacy">Sin spam. Cancela cuando quieras.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong class="wordmark" aria-label="Contraonda"><span aria-hidden="true">CONTR<span class="wordmark-a">Λ</span>OND<span class="wordmark-a">Λ</span></span></strong>
+      <p>Curando buena vibra desde la Ciudad de México.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/contraonda.cdmx/" target="_blank" rel="noreferrer">Instagram ↗</a>
+      <a href="https://ra.co/promoters/187098" target="_blank" rel="noreferrer">Resident Advisor ↗</a>
+      <a href="mailto:hola@contraonda.mx">hola@contraonda.mx</a>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 Contraonda</span>
+      <span>v0.2 · Online</span>
+    </div>
+  </footer>
+
+  <aside class="soundbar" aria-label="Reproductor de audio">
+    <input class="sr-only" id="audio-file" type="file" accept="audio/*">
+
+    <label class="load-track alien-module alien-module--player" for="audio-file">
+      <span aria-hidden="true">＋</span>
+      <span>Cargar pista</span>
+    </label>
+
+    <button class="play-track alien-module alien-module--player" type="button" disabled aria-label="Reproducir">
+      <span aria-hidden="true">▶</span>
+    </button>
+
+    <div class="track-info">
+      <strong>Ninguna pista cargada</strong>
+      <span>Audio local · no se sube</span>
+    </div>
+
+    <div class="track-progress">
+      <input id="audio-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Progreso de la pista" disabled>
+      <span class="track-time">00:00 / 00:00</span>
+    </div>
+
+    <canvas id="audio-visualizer" aria-hidden="true"></canvas>
+
+    <label class="volume-control">
+      <span aria-hidden="true">◖</span>
+      <span class="sr-only">Volumen</span>
+      <input id="audio-volume" type="range" min="0" max="1" value="0.82" step="0.01">
+    </label>
+
+    <audio id="audio-player" preload="metadata"></audio>
+  </aside>
+
+  <noscript>
+    <p class="no-script">Contraonda — música electrónica progresiva y melódica.</p>
+  </noscript>
+</body>
+</html>

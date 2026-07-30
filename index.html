@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="Contraonda visual edition showcase.">
+  <title>Contraonda — Signal Lab</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2307090d'/%3E%3Cpath d='M8 32c7-18 13-18 20 0s13 18 28 0' fill='none' stroke='%23ff2d43' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="showcase.css?v=1">
+  <script defer src="showcase.js?v=1"></script>
+</head>
+<body>
+  <header class="switcher">
+    <a class="switcher-brand" href="./" aria-label="Contraonda Signal Lab home">
+      <strong>CONTRΛONDΛ</strong>
+      <span>Signal Lab</span>
+    </a>
+
+    <nav class="edition-tabs" aria-label="Choose a visual edition">
+      <button data-edition="red" type="button" aria-pressed="true"><i></i>Red Signal</button>
+      <button data-edition="acid" type="button" aria-pressed="false"><i></i>Acid Signal</button>
+      <button data-edition="ultraviolet" type="button" aria-pressed="false"><i></i>Ultraviolet</button>
+      <button data-edition="pearl" type="button" aria-pressed="false"><i></i>Pearl</button>
+    </nav>
+
+    <div class="switcher-actions">
+      <button class="copy-link" type="button">Copy link</button>
+      <a class="open-edition" href="red/index.html" target="_blank" rel="noopener">Open ↗</a>
+    </div>
+  </header>
+
+  <main class="edition-stage">
+    <div class="loading-signal" role="status" aria-live="polite">
+      <i></i>
+      <span>Loading signal</span>
+    </div>
+    <iframe
+      class="edition-frame"
+      src="red/index.html"
+      title="Contraonda Red Signal edition"
+      allow="autoplay"
+    ></iframe>
+  </main>
+</body>
+</html>
