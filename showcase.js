@@ -1,4 +1,10 @@
 const editions = {
+  original: {
+    label: "Original GPT",
+    path: "original/index.html",
+    accent: "#ff2d43",
+    background: "#070807",
+  },
   red: {
     label: "Red Signal",
     path: "red/index.html",

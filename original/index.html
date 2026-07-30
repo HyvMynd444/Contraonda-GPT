@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070807">
+  <meta name="description" content="Contraonda — noches de música electrónica progresiva y melódica en Ciudad de México.">
+  <title>Contraonda — CDMX</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23070807'/%3E%3Cpath d='M8 32c7-18 13-18 20 0s13 18 28 0' fill='none' stroke='%23d9ff00' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="ambient" aria-hidden="true">
+    <div id="canvas-container"></div>
+    <div class="aurora"></div>
+    <div class="signal-grid"></div>
+    <div class="cymatics"></div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="laser-frame" aria-hidden="true">
+    <i class="laser laser--top"></i>
+    <i class="laser laser--right"></i>
+    <i class="laser laser--bottom"></i>
+    <i class="laser laser--left"></i>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Contraonda, inicio">
+      <strong class="wordmark" aria-hidden="true">CONTR<span class="wordmark-a">Λ</span>ONDA</strong>
+      <span>CDMX · MX</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#fechas">Fechas</a>
+      <a href="#lista">Lista</a>
+    </nav>
+
+    <a class="header-cta" href="#fechas">Admit one <span>↗</span></a>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-kicker">
+        <strong>Curando buena vibra</strong>
+        <span>Música electrónica<br>progresiva y melódica.</span>
+      </div>
+
+      <div class="hero-title-wrap">
+        <p class="signal" aria-hidden="true">Signal 19.4326° N</p>
+        <h1 id="hero-title" aria-label="Contraonda"><span aria-hidden="true">CONTR<span class="wordmark-a">Λ</span>ONDA</span></h1>
+        <p class="hero-subtitle">Contra la corriente · Ciudad de México</p>
+      </div>
+
+      <a class="scroll-cue" href="#sobre">
+        <span>Entrar</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <section class="about section section-grid" id="sobre" aria-labelledby="about-title">
+      <div class="section-index">
+        <span>—01</span>
+        <span>Sobre</span>
+      </div>
+
+      <div class="about-copy reveal">
+        <h2 id="about-title">Contraonda<span>.</span></h2>
+        <p class="lead">Warm-ups que importan. Música que evoluciona con intención. Noches inmersivas de principio a fin.</p>
+        <p>Sonido, movimiento y personas presentes en la pista.</p>
+        <p>Una serie de noches íntimas. Aforos cuidados, salas que respiran.</p>
+        <p class="muted">Para quienes van contra corriente.</p>
+      </div>
+
+      <div class="frequency-mark" aria-hidden="true">
+        <span>40 Hz</span>
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        <span>18 kHz</span>
+      </div>
+    </section>
+
+    <section class="dates section section-grid" id="fechas" aria-labelledby="dates-title">
+      <div class="section-index">
+        <span>—02</span>
+        <span>Calendario</span>
+      </div>
+
+      <div class="dates-content reveal">
+        <p class="overline">Próxima transmisión</p>
+        <h2 id="dates-title">Próximas<br><em>fechas</em></h2>
+        <p class="coming-soon">Nuestra primera noche llega pronto.</p>
+        <p class="fine-print">Las primeras fechas se anuncian a la lista antes que a nadie.</p>
+
+        <a class="admit-ticket" href="#lista" aria-label="Únete a la lista para acceso anticipado">
+          <span class="ticket-face">
+            <span class="ticket-copy">
+              <small class="wordmark" aria-hidden="true">CONTR<span class="wordmark-a">Λ</span>ONDA</small>
+              <strong>Admit one</strong>
+            </span>
+            <span class="ticket-code" aria-hidden="true">CO · 001 · CDMX</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="coordinates" aria-hidden="true">
+        <span>19.4326° N</span>
+        <span>99.1332° W</span>
+      </div>
+    </section>
+
+    <section class="newsletter section section-grid" id="lista" aria-labelledby="newsletter-title">
+      <div class="section-index">
+        <span>—03</span>
+        <span>Lista</span>
+      </div>
+
+      <div class="newsletter-content reveal">
+        <p class="overline">Canal privado</p>
+        <h2 id="newsletter-title">Anuncios primero<br>a quien <em>escucha.</em></h2>
+        <p>Fechas, line-ups y grabaciones antes que en redes sociales.</p>
+
+        <form class="signup-form" novalidate>
+          <label class="sr-only" for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+          <button type="submit">Suscribir <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="privacy">Sin spam. Cancela cuando quieras.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong class="wordmark" aria-label="Contraonda"><span aria-hidden="true">CONTR<span class="wordmark-a">Λ</span>ONDA</span></strong>
+      <p>Curando buena vibra desde la Ciudad de México.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/contraonda.cdmx/" target="_blank" rel="noreferrer">Instagram ↗</a>
+      <a href="https://ra.co/promoters/187098" target="_blank" rel="noreferrer">Resident Advisor ↗</a>
+      <a href="mailto:hola@contraonda.mx">hola@contraonda.mx</a>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 Contraonda</span>
+      <span>v0.2 · Online</span>
+    </div>
+  </footer>
+
+  <aside class="soundbar" aria-label="Reproductor de audio">
+    <input class="sr-only" id="audio-file" type="file" accept="audio/*">
+
+    <label class="load-track" for="audio-file">
+      <span aria-hidden="true">＋</span>
+      <span>Cargar pista</span>
+    </label>
+
+    <button class="play-track" type="button" disabled aria-label="Reproducir">
+      <span aria-hidden="true">▶</span>
+    </button>
+
+    <div class="track-info">
+      <strong>Ninguna pista cargada</strong>
+      <span>Audio local · no se sube</span>
+    </div>
+
+    <div class="track-progress">
+      <input id="audio-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Progreso de la pista" disabled>
+      <span class="track-time">00:00 / 00:00</span>
+    </div>
+
+    <canvas id="audio-visualizer" aria-hidden="true"></canvas>
+
+    <label class="volume-control">
+      <span aria-hidden="true">◖</span>
+      <span class="sr-only">Volumen</span>
+      <input id="audio-volume" type="range" min="0" max="1" value="0.82" step="0.01">
+    </label>
+
+    <audio id="audio-player" preload="metadata"></audio>
+  </aside>
+
+  <noscript>
+    <p class="no-script">Contraonda — música electrónica progresiva y melódica.</p>
+  </noscript>
+</body>
+</html>

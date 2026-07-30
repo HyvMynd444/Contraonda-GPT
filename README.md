@@ -1,7 +1,8 @@
 # Contraonda Signal Lab
 
-One-link showcase containing four complete Contraonda editions:
+One-link showcase containing five complete Contraonda editions:
 
+- Original GPT
 - Red Signal
 - Acid Signal
 - Ultraviolet
